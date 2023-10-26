@@ -1,7 +1,11 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/BloodWheelView">Blood Wheel Counter</router-link> |
+    <router-link to="/MagnitudeView">Magnitude</router-link> |
+    <router-link to="/OuchyNumberView">Ouchy Number</router-link> |
+    <router-link to="/PlinkoCounterView">Plinko</router-link> |
+    <router-link to="/SpinalFluidPongView">Spinal Fluid Pong</router-link>
   </nav>
   <router-view/>
 </template>
