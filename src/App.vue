@@ -1,11 +1,11 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/BloodWheelView">Blood Wheel Counter</router-link> |
-    <router-link to="/MagnitudeView">Magnitude</router-link> |
+    <router-link to="/BloodWheelScore">Blood Wheel Counter</router-link> |
     <router-link to="/OuchyNumberView">Ouchy Number</router-link> |
     <router-link to="/PlinkoCounterView">Plinko</router-link> |
-    <router-link to="/SpinalFluidPongView">Spinal Fluid Pong</router-link>
+    <router-link to="/SpinalFluidPongView">Spinal Fluid Pong</router-link> |
+    <router-link to="/TwoTruthsOneDieView">Two Truths One Die</router-link>
   </nav>
   <router-view/>
 </template>
@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ff0000;
 }
 
 nav {
@@ -25,10 +25,10 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #a05858;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #7e1212;
 }
 </style>

@@ -11,7 +11,8 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-simple-alert": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -42,7 +43,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {"vue/multi-word-component-names": "off"},
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    },
     "overrides": [
       {
         "files": [

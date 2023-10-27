@@ -18,19 +18,19 @@ const routes = [
     component: () => import('../views/BloodWheelView.vue')
   },
   {
-    path: '/MagnitudeView',
-    name: 'magnitude',
-    component: () => import('../views/MagnitudeView.vue')
-  },
-  {
     path: '/SpinalFluidPongView',
     name: 'spinePong',
     component: () => import('../views/SpinalFluidPongView.vue')
   },
   {
-    path: '/PlinkoView',
+    path: '/PlinkoCounterView',
     name: 'plinko',
     component: () => import('../views/PlinkoCounterView.vue')
+  },
+  {
+    path: '/TwoTruthsOneDieView',
+    name: 'TwoTruthsOneDie',
+    component: () => import('../views/TwoTruthsOneDieView.vue')
   }
 ]
 
