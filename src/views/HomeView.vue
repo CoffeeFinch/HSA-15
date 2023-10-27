@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img class="logo" src="../assets/TPIL-Logo.png"/>
+    <img class="logo" src="../assets/Logo-Stencil-on.png"/>
   </div>
 </template>
 
