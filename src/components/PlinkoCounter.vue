@@ -1,12 +1,14 @@
 <template>
   <div class="main">
-    <h1>Plinko Counter</h1>
+    <h1 class="title">Plink! oh no</h1>
     <div></div>
     <div>
-      <p>{{ counters[1] }}</p>
-      <button @click="increment2">Increase</button>
-      <button @click="decrement2">Decrease</button>
-      <button @click="resetCount2">Reset</button>
+      <p class="counter">{{ counters[1] }}</p>
+      <div class="buttons">
+      <button class="btn" @click="increment1">Increase</button>
+      <button class="btn" @click="decrement1">Decrease</button>
+      <button class="btn" @click="resetCount2">Reset</button>
+    </div>
       <br />
       <div class="plink">
         <div class="plinkHole">
@@ -19,12 +21,12 @@
           <img
             class="lePlink"
             src="../assets/Logo-Stencil-on.png"
-            @click="toggleElements1(); decrement1()"
+            @click="toggleElements1"
             v-show="!showPlink1"
           />
           <img
             class="lePlink"
-            @click="toggleElements2"
+            @click="toggleElements1(); decrement1()"
             v-show="showPlink2"
             src="../assets/Logo-Stencil-off.png"
           />
@@ -35,7 +37,6 @@
             v-show="!showPlink2"
           />
           1
-          <button>Add A Plink</button>
         </div>
         <div class="plinkHole">
           <img
@@ -63,7 +64,6 @@
             v-show="!showPlink4"
           />
           2
-          <button @click="decrement1">Add A Plink</button>
         </div>
         <div class="plinkHole">
           <img
@@ -91,7 +91,7 @@
             v-show="!showPlink6"
           />
           5
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -119,7 +119,7 @@
             v-show="!showPlink8"
           />
           0
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -147,7 +147,7 @@
             v-show="!showPlink10"
           />
           10
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -175,7 +175,7 @@
             v-show="!showPlink12"
           />
           0
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -203,7 +203,7 @@
             v-show="!showPlink14"
           />
           5
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -231,7 +231,7 @@
             v-show="!showPlink16"
           />
           2
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
         <div class="plinkHole">
           <img
@@ -259,7 +259,7 @@
             v-show="!showPlink18"
           />
           1
-          <button @click="decrement1">Add A Plink</button>
+
         </div>
       </div>
 
@@ -348,8 +348,8 @@ export default {
     toggleElements18() {
       this.showPlink18 = !this.showPlink18; // Toggle the value
     },
-    increment2() {
-      this.counters[1] += 5;
+    increment1() {
+      this.counters[1] += 1;
     },
     decrement1() {
       this.counters[1] -= 1;
@@ -370,18 +370,49 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.title {
+  font-family: monoton;
+  font-size: 8em;
+  margin-top: -5vh;
+  margin-bottom: -5vh;
+}
+.counter {
+  font-family: monoton;
+  font-size: 8em;
+  margin-top: -4vh;
+  margin-bottom: -1vh;
+}
+.buttons {
+  margin-bottom: -17vh;
+}
+.btn {
+    font-family: tektur;
+    /* font-weight: bolder; */
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 8em;
+    height: 2em;
+    font-size: 1em;
+    background-color: rgb(78, 0, 0);
+    color: white;
+  }
 .lePlink {
-  width: 12vh;
+  width: 10.5vw;
 }
 .plinkHole {
   display: flex;
   flex-direction: column;
   border-right-style: solid;
   border-left-style: solid;
+  border-bottom-style: solid;
   border-color: white;
+  font-family: Monoton;
+  font-size:4em;
 }
 .plink {
   display: flex;
+  justify-content: center;
+  margin-top: 18vh;
 }
 </style>

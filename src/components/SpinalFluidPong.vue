@@ -1,15 +1,9 @@
 <template>
   <div class="main">
-    <h1>Spinal Fluid Pong</h1>
-    <div></div>
-    <div>
-      <p>{{ counters[1] }}%</p>
-  <button @click="increment2">Increase</button>
-  <button @click="decrement2">Decrease</button>
-  <button @click="resetCount2">Reset</button>
-  <br>
-  <!-- Display the image based on the second counter's value -->
-  <img class="skulman" v-if="(counters[1] <= 5)" src="../assets/spinaltap/spinal0.png" />
+    <h1 class="title">Spinal Fluid Pong</h1>
+    <div class="counterHolder">
+      <p class="counter">{{ counters[1] }}%</p>
+      <img class="skulman" v-if="(counters[1] <= 5)" src="../assets/spinaltap/spinal0.png" />
   <img class="skulman" v-if="(counters[1] >= 10) && (counters[1] <= 19)" src="../assets/spinaltap/spinal10.png" />
   <img class="skulman" v-if="(counters[1] >= 20) && (counters[1] <= 24)" src="../assets/spinaltap/spinal20.png" />
   <img class="skulman" v-if="(counters[1] >= 25) && (counters[1] <= 29)" src="../assets/spinaltap/spinal25.png" />
@@ -25,13 +19,14 @@
   <img class="skulman" v-if="(counters[1] >= 75) && (counters[1] <= 79)" src="../assets/spinaltap/spinal75.png" />
   <img class="skulman" v-if="(counters[1] >= 80) && (counters[1] <= 84)" src="../assets/spinaltap/spinal80.png" />
   <img class="skulman" v-if="(counters[1] >= 85) && (counters[1] <= 100)" src="../assets/spinaltap/spinal85.png" />
-      <!-- upButton -->
-      <!-- downButton -->
-      <!-- bigNumberPercentages -->
-      <!-- You -->
-      <!-- resetButton -->
     </div>
-  </div>
+  <div class="button">
+    <button class="btn" @click="increment2">Increase</button>
+    <button class="btn" @click="decrement2">Decrease</button>
+  <button class="btn" @click="resetCount2">Reset</button>
+</div>
+  <br>
+    </div>
 </template>
 
 <script>
@@ -39,7 +34,7 @@
 export default {
 data () {
   return {
-    counters: [100, 100]
+    counters: [0, 0]
   }
 },
 methods: {
@@ -65,8 +60,47 @@ methods: {
 }
 </script>
 
-<style>
+<style scoped>
 .skulman {
-  height: 75vh;
+  height: 50vh;
 }
+.title {
+  font-family: love ya like a sister;
+  font-size: 8em;
+  font-weight:lighter;
+  margin-top: -2vh;
+  margin-bottom: -2vh;
+}
+.counter {
+  font-family: love ya like a sister;
+  font-size: 8em;
+  margin-top: -4vh;
+  margin-bottom: -1vh;
+  width: 12vw;
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+  padding-top: 18vh;
+}
+.btn {
+    font-family: tektur;
+    /* font-weight: bolder; */
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 8em;
+    height: 2em;
+    font-size: 1em;
+    background-color: rgb(78, 0, 0);
+    color: white;
+  }
+  .button {
+    display: inline-flex;
+  }
+  .counterHolder {
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 </style>

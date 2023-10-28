@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/BloodWheelScore">Blood Wheel Counter</router-link> |
     <router-link to="/OuchyNumberView">Ouchy Number</router-link> |
-    <router-link to="/PlinkoCounterView">Plinko</router-link> |
+    <router-link to="/PlinkoCounterView">Plink! oh no</router-link> |
     <router-link to="/SpinalFluidPongView">Spinal Fluid Pong</router-link> |
     <router-link to="/TwoTruthsOneDieView">Two Truths One Die</router-link>
   </nav>

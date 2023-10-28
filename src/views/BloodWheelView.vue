@@ -1,7 +1,6 @@
 <template>
   <div class="BloodWheelScore">
     <BloodWheelScore />
-    Blood Wheel Go!
   </div>
 </template>
 
